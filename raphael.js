@@ -4117,6 +4117,12 @@
         if (this.removed) {
             return {};
         }
+        // HACK by slaweet to speed thing up
+        var cached = bboxCache && bboxCache.get(this.node.id, this.paper);
+        if (cached) {
+            return cached;
+        }
+        // END HACK
         var _ = this._;
         if (isWithoutTransform) {
             if (_.dirty || !_.bboxwt) {
