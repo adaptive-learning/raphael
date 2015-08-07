@@ -6193,7 +6193,7 @@
                     break;
                     case "path":
                         if (o.type == "path") {
-                            $(node, {d: value ? attrs.path = R._pathToAbsolute(value) : "M0,0"});
+                            $(node, {d: value ? attrs.path = value : "M0,0"});
                             o._.dirty = 1;
                             if (o._.arrows) {
                                 "startString" in o._.arrows && addArrow(o, o._.arrows.startString);
