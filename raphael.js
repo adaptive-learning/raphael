@@ -4118,7 +4118,7 @@
             return {};
         }
         // HACK by slaweet to speed thing up
-        var cached = bboxCache && bboxCache.get(this.node.id, this.paper);
+        var cached = window.bboxCache && window.bboxCache.get(this.node.id, this.paper);
         if (cached) {
             return cached;
         }
